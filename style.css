@@ -1,0 +1,51 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+    font: 1.2em "Lucida Console", serif;
+    font-weight: normal;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    background: linear-gradient(to right, #00FFEE, #FFAAEE);
+}
+
+.main {
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    min-height: 100vh;
+    grid-template-columns: repeat(4, 100px);
+    grid-template-rows: minmax(120px, auto) repeat(5, 100px);
+    border-radius: 1rem;
+}
+
+.main > button:hover {
+    background-color: rgba(255, 255, 255, .9);
+}
+
+.double {
+    grid-column: span 2;
+}
+
+.output {
+    grid-column: 1 / -1;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-around;
+    flex-direction: column;
+    word-wrap: break-word;
+    word-break: break-all;
+    padding: 10px;
+}
+
+.output .previous {
+    color: white;
+    font-size: 1.5rem;
+}
+
+.output .current {
+    color: white;
+    font-size: 2.5rem;
+}
